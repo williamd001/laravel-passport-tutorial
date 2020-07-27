@@ -28,7 +28,6 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::routes();
 
-//        Passport::tokensExpireIn(now()->addMinutes(3)); todo testing what happens when tokens expire
-        //
+        Passport::tokensExpireIn(now()->addMinutes(3)); // just for demonstration purposes
     }
 }

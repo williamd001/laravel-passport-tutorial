@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'product_api' => [
+        'grant_type' => env('PRODUCT_API_GRANT_TYPE'),
+        'client_id' => env('PRODUCT_API_CLIENT_ID'),
+        'client_secret' => env('PRODUCT_API_CLIENT_SECRET'),
+    ],
 ];
