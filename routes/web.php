@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+ * steps
+ *
+ * composer require laravel/passport
+ * php artisan migrate
+ * php artisan passport:install
+ * php artisan passport:client --client
+ * Client ID: 3
+    Client secret: WDSzVq7x4vjVfl7dk5QG0uX66vrWfYE0q9SmzRf6
+
+add to route middleware group
+
+
+ */
