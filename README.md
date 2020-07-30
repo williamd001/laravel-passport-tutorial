@@ -1,6 +1,6 @@
-#Laravel Passport Client Grant tutorial
+# Laravel Passport Client Grant tutorial
 
-##Overview
+## Overview
 
 This tutorial aims to provide a simple laravel passport implementation using client grant tokens. 
 
@@ -10,7 +10,7 @@ The `/products` endpoint represents a 1st party application which uses the produ
 
 For more information regarding laravel passport please visit the official documentation https://laravel.com/docs/7.x/passport#client-credentials-grant-tokens.
 
-##How to use
+## How to use
 1. git clone this repo
 2. `composer install`
 3. `cp .env.example .env`
