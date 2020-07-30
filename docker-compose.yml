@@ -3,6 +3,7 @@ version: '2'
 services:
 
   nginx:
+    container_name: app
     image: nginx:latest
     ports:
       - 8080:80
@@ -12,6 +13,7 @@ services:
       - php
 
   php:
+    container_name: php
     build: ./docker/php/
     volumes:
       - .:/var/www/html

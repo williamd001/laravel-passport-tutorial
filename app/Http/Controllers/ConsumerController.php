@@ -15,6 +15,9 @@ class ConsumerController extends Controller
 
     const ACCESS_TOKEN_CACHE_TIME = 43800 * 60; // 1 month
 
+    const DOMAIN = 'app'; // this is the container name for nginx
+
+
     public function index(): array
     {
         $accessToken = Cache::remember('access_token', self::ACCESS_TOKEN_CACHE_TIME, function () {
@@ -42,12 +45,12 @@ class ConsumerController extends Controller
         return Http::withHeaders([
             'Authorization' => 'Bearer ' . $accessToken,
             'Accept' => 'application/json',
-        ])->get('http://laravelpassporttutorial_nginx_1/api/products');
+        ])->get('http://' . self::DOMAIN . '/api/products');
     }
 
     private function getAccessToken(): string
     {
-        $url = 'http://laravelpassporttutorial_nginx_1/oauth/token'; // this is the name given when running docker ps - https://stackoverflow.com/questions/52246250/docker-web-and-apis-refusing-connection
+        $url = 'http://' . self::DOMAIN . '/oauth/token'; // this is the name given when running docker ps - https://stackoverflow.com/questions/52246250/docker-web-and-apis-refusing-connection
 
         $response = Http::post($url, config('services.product_api'));
 
