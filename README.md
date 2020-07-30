@@ -1,4 +1,4 @@
-#Laravel Passport tutorial
+#Laravel Passport Client Grant tutorial
 
 ##Overview
 
@@ -6,11 +6,9 @@ This tutorial aims to provide a simple laravel passport implementation using cli
 
 The project uses a custom product api to list product information whenever the `/api/products` endpoint is accessed.
 
-The /products endpoint represents a 1st party application which uses the product api. To enhance the security of this dummy application the `/api/products` endpoint has been protected using laravel passport's client middleware.
+The `/products` endpoint represents a 1st party application which uses the product api. To enhance the security of this dummy application the `/api/products` endpoint has been protected using laravel passport's client middleware.
 
 For more information regarding laravel passport please visit the official documentation https://laravel.com/docs/7.x/passport#client-credentials-grant-tokens.
-
-
 
 ##How to use
 1. git clone this repo
